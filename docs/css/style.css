@@ -1,0 +1,145 @@
+body  {
+    background-image: url("../img/water.png");
+}
+
+.meter {
+    height: 50px;
+    display: inline-block;
+    width: 100%;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+pointer {
+    height: 50px;
+    width: 3px;
+    background-color: black;
+    display: inline-block
+    
+}
+
+#honger {
+    background-color: #FF3B30;
+    float: left;
+    max-width: 400px;
+}
+
+#moe {
+    background-color: #007AFF;
+    float: right;
+    max-width: 400px;
+}
+
+#gezondheid {
+    background: linear-gradient(to right, #4CD964, #FF3B30);   
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 30px;
+}
+#wrapper {
+    width:100%;
+    text-align:center;
+}
+
+animal {
+    max-width: 800px;
+    max-height: 428px;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    margin: auto;
+
+    animation: fishanimation 4s ease-in-out infinite alternate;
+}
+
+animal img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#animalName {
+    position: fixed;
+    width:100%;
+    bottom: 20%;
+    text-align: center;
+    display: inline-block;
+    font-family: Bradley Hand, Helvetica, sans-serif;
+    font-size: 40px;
+}
+
+#buttonWrapper {
+    position: fixed;
+    width:100%;
+    bottom: 5%;
+    text-align: center;
+    display: inline-block;
+}
+
+button {
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.4s;
+    height: 100px;
+    width: 100px;
+    border: none;
+    outline: none; 
+    margin: 0px 20px;
+    border-radius: 50%;
+    box-shadow: 0 9px rgba(230, 230, 230, 0.2);
+}
+
+button:hover{
+    -webkit-transition-duration: 0.6s;
+    transition-duration: 0.4s;
+    border: 4px solid rgb(230, 230, 230);
+}
+
+button img {
+    height: 64px;
+    width: 64px;
+}
+
+#eatButton {
+    background-color: #FF3B30;
+}
+
+#restButton {
+    background-color: #007AFF;
+}
+
+button:active {
+    background-color: #3e8e41;
+    transform: translateY(8px);
+    box-shadow: 0 1px rgba(230, 230, 230, 0.2);
+  }
+
+@keyframes fishanimation {
+    0% {
+      transform: translateY(20px);
+    }
+    
+    100% {
+      transform: translateY(60px);
+    }
+}
+
+@media only screen and (max-width: 890px) {
+    #moe, #honger {
+        float: none;
+    }
+}
+
+@media only screen and (max-width: 525px) {
+    animal img {
+        width: 100%;
+        margin: 130px auto;
+    }
+}
+
+
