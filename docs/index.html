@@ -1,43 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>EvoLife Game</title>
+        <script type="text/javascript">
+        if (localStorage.getItem("startGame") === null) {
+            window.location.href = 'menu';  
+        }
+        </script>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="./css/style.css">
-        <title>Typescript</title>
     </head>
     <body>
-        <background></background>
-        <div class="meter" id="gezondheid">
-            <pointer id="healthPointer"></pointer>
-            <p>Gezondheid</p>
-        </div>
-
-        <div id="wrapper">
-            <div class="meter" id="honger">
-                <pointer id="hungerPointer"></pointer>
-                <p>Honger</p></div>  
-            <div class="meter" id="moe">
-                <pointer id="tiredPointer"></pointer>
-                <p>Moe</p>
-            </div>
-        </div>
-
-        <animal>
-            <img src="./img/fish happy.png" alt="">
-        </animal>
-
-        <h1 id="animalName">Cephalaspis</h1>
-
-        <div id="buttonWrapper">
-            <button id="eatButton">
-                <img src="img/dish.png" alt="eten">
-            </button>
-            <button id="restButton">
-                <img src="img/bed.png" alt="rusten">
-            </button>  
-        </div>  
+        <game>
+            <background></background>
+            <forground></forground>  
+        </game>
         <script src="./js/main.js"></script>
     </body>
 </html>

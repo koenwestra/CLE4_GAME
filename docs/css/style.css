@@ -1,61 +1,85 @@
-body  {
+body {
+    width:100%; height:100%;
     background-image: url("../img/water.png");
+    margin: 0px;
+    font-family: Bradley Hand, Helvetica, sans-serif;
 }
 
-.meter {
+sleeppointer {
     height: 50px;
-    display: inline-block;
-    width: 100%;
+    background: #007AFF;
+    display: block;
+    border-radius: 5px 10px 10px 5px;
+    transition: width .4s ease-in-out;
+    float: right;
+    border-left: solid black 1px;
+}
+
+eatpointer {
+    height: 50px;
+    background-color: #FF3B30;
+    display: block;
+    border-radius: 5px 10px 10px 5px;
+    transition: width .4s ease-in-out;
+    float: right;
+    border-left: solid black 1px;
+}
+
+healthpointer {
+    height: 50px;
+    width: 4px;
+    background-color: black;
+    display: block;
+    float: right
+}
+
+bar {
+    height: 50px;
+    display: block;
     margin: 10px;
     border-radius: 10px;
     border: 2px solid black;
-}
-
-pointer {
-    height: 50px;
-    width: 3px;
-    background-color: black;
-    display: inline-block
-    
-}
-
-#honger {
-    background-color: #FF3B30;
-    float: left;
     max-width: 400px;
+    width:100%;    
 }
 
-#moe {
-    background-color: #007AFF;
+#eatbar {
+    background-color: rgba(255, 59, 48, 0.3);
     float: right;
-    max-width: 400px;
 }
 
-#gezondheid {
-    background: linear-gradient(to right, #4CD964, #FF3B30);   
-    display: block;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 30px;
+#sleepbar {
+    background-color: rgba(0, 122, 255, 0.3);
+    float: left;
 }
-#wrapper {
+
+healthbar {
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid black;
+    background: linear-gradient(to right, #4CD964, #4CD964 50%, #FF3B30);   
+    display: block;
+    max-width: 400px;
+    margin: 10px auto;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+eatbar text {
+    display: block;
+}
+
+wrapper {
     width:100%;
     text-align:center;
 }
 
 animal {
-    max-width: 800px;
-    max-height: 428px;
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    max-width: 500px;
+    max-height: 700px;
     padding: 20px;
     margin: auto;
-
+    display:block;
     animation: fishanimation 4s ease-in-out infinite alternate;
 }
 
@@ -64,7 +88,7 @@ animal img {
     margin: 0 auto;
 }
 
-#animalName {
+animalname {
     position: fixed;
     width:100%;
     bottom: 20%;
@@ -74,7 +98,7 @@ animal img {
     font-size: 40px;
 }
 
-#buttonWrapper {
+buttonWrapper {
     position: fixed;
     width:100%;
     bottom: 5%;
@@ -92,6 +116,7 @@ button {
     margin: 0px 20px;
     border-radius: 50%;
     box-shadow: 0 9px rgba(230, 230, 230, 0.2);
+    touch-action: manipulation;
 }
 
 button:hover{
@@ -105,12 +130,16 @@ button img {
     width: 64px;
 }
 
-#eatButton {
+#eatbutton {
     background-color: #FF3B30;
 }
 
-#restButton {
+#sleepbutton {
     background-color: #007AFF;
+}
+
+#drinkbutton {
+    background-color: #5AC8FA;
 }
 
 button:active {
@@ -130,16 +159,106 @@ button:active {
 }
 
 @media only screen and (max-width: 890px) {
-    #moe, #honger {
+    sleepbar, eatbar {
         float: none;
+        margin: 0 auto;
+        margin-bottom: 5px;
+        display: block;
+    }
+    healthbar {
+        max-width: 400px;
     }
 }
 
 @media only screen and (max-width: 525px) {
     animal img {
-        width: 100%;
-        margin: 130px auto;
+        width: 32vh;
+        display: block;
+    }
+    animal {
+        padding-top: 0;
     }
 }
 
+/*Menu START*/
+
+.navMenu{
+	width: 100%;
+	background-color: #92bd69;
+    font-size: 3.75vh;
+    color: white;
+    box-shadow: 0 4px 6px #a9a9a9,0 1px 3px rgba(0,0,0,.08)!important;
+    transition: 0.5s margin ease;
+    margin-bottom: 25px;
+    border-radius: 3.5px;
+}
+
+.navMenu:hover {
+    cursor: pointer;
+    margin-top: 8px !important;
+    transition: 0.5s box-shadow margin opacity ease;
+    box-shadow: 0 6px 5px #a9a9a9,0 1px 3px rgba(0,0,0,.08)!important;
+    opacity: 0.9;
+}
+
+input#un-mute {
+    display: none;
+}
+
+.mute img {
+    height: 5.75vh;
+    width: 5.75vh;
+}
+.unmute img {
+    display: none;
+    height: 5.75vh;
+    width: 5.75vh;
+}
+
+input#un-mute:checked ~ .unmute img {
+    display: initial;
+}
+
+input#un-mute:checked ~ .mute img {
+    display: none;
+}
+
+#logo{
+    width: auto;
+    height: 20vh;
+
+}
+
+bubble { 
+    display: block;
+    position: absolute;
+    width: 50px; 
+    height: 50px; 
+    background-color: white;
+    left:50vw;
+    animation: bubbleup 4s linear infinite, proteroanimation 4s ease-in-out infinite alternate;
+    
+    
+  }
+
+paddle {
+    background-color:black;
+    width:25px; height:100px;
+    display: block;
+    position: absolute;
+}
+
+  @keyframes bubbleup {
+        0% {
+          transform: translateY(20px);
+        }
+        
+        100% {
+          transform: translateY(60px);
+        }
+    }
+
+  
+
+/*Menu END*/
 
