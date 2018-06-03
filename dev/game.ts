@@ -1,3 +1,4 @@
+// Game is created with switch from levels and gameloop
 class Game {
     
     private currentscreen: Proterolevel | Fishlevel | Lizardlevel 

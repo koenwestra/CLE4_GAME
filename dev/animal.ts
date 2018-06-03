@@ -1,3 +1,4 @@
+// Animal is created with image
 class Animal {
 
     private element:HTMLElement

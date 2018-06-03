@@ -1,3 +1,4 @@
+// Paddle is created
 class Paddle {
 
     private div: HTMLElement
@@ -14,6 +15,7 @@ class Paddle {
     private leftSpeed: number = 0 
     private rightSpeed: number = 0 
 
+    // Paddle is added to foreground and keys are added 
     constructor() {
         let forground = document.getElementsByTagName("forground")[0]
         this.div = document.createElement("paddle")
@@ -36,6 +38,7 @@ class Paddle {
         return this.div.getBoundingClientRect()
     }
 
+    
     private onKeyDown(e: KeyboardEvent): void {
         switch (e.keyCode) {
             case this.upkey:

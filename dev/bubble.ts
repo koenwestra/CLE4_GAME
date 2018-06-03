@@ -1,4 +1,4 @@
- 
+// Bubble is created in foreground with x and y posistion
     class Bubble { 
         private yposition:number 
         private xposition:number

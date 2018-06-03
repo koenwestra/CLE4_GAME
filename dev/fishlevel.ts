@@ -1,3 +1,4 @@
+// First stage of the Evolife game is created with all game element
 class Fishlevel {
 
     private game : Game

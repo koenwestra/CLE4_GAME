@@ -1,3 +1,4 @@
+// Healtbar is created with drawPointer to get healthScore
 class Healthbar {
 
     private bar: HTMLElement

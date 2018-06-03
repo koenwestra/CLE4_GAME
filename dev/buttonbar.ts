@@ -1,3 +1,4 @@
+// Button for progress bar is created with image, pointer and text
 class Buttonbar {
 
     private bar:HTMLElement

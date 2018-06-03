@@ -5,6 +5,13 @@ body {
     font-family: Bradley Hand, Helvetica, sans-serif;
 }
 
+wrapper {
+    width:100%;
+    text-align:center;
+}
+
+/* Progress from the progressbars */
+
 sleeppointer {
     height: 50px;
     background: #007AFF;
@@ -32,6 +39,8 @@ healthpointer {
     display: block;
     float: right
 }
+
+/* Progress bars */
 
 bar {
     height: 50px;
@@ -69,10 +78,7 @@ eatbar text {
     display: block;
 }
 
-wrapper {
-    width:100%;
-    text-align:center;
-}
+/* animal styling */
 
 animal {
     max-width: 500px;
@@ -97,6 +103,9 @@ animalname {
     font-family: Bradley Hand, Helvetica, sans-serif;
     font-size: 40px;
 }
+
+
+/* buttons */
 
 buttonWrapper {
     position: fixed;
@@ -148,6 +157,8 @@ button:active {
     box-shadow: 0 1px rgba(230, 230, 230, 0.2);
   }
 
+/* keyframes and media queries */
+
 @keyframes fishanimation {
     0% {
       transform: translateY(20px);
@@ -180,7 +191,7 @@ button:active {
     }
 }
 
-/*Menu START*/
+/* Menu START */
 
 .navMenu{
 	width: 100%;
@@ -229,6 +240,10 @@ input#un-mute:checked ~ .mute img {
 
 }
 
+/* Menu END */
+
+/* first level mini game */
+
 bubble { 
     display: block;
     position: absolute;
@@ -260,5 +275,5 @@ paddle {
 
   
 
-/*Menu END*/
+
 

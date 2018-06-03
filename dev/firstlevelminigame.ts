@@ -1,5 +1,4 @@
-
-
+// First level is created with paddle, bubble and score 
 class Proterolevel {
     private paddle:Paddle
     private bubbles:Bubble[]
